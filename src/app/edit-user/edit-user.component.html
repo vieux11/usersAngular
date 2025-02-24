@@ -1,0 +1,67 @@
+<div class="container py-5">
+    <h1 class="my-5">Modifier l'utilisateur</h1>
+    <!-- Message de confirmation -->
+    <div *ngIf="isOpen" class="alert alert-success alert-dismissible fade show" role="alert">
+      Modification réussie!
+      <button (click)="close()" type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-8">
+        <form [formGroup]="applyForm" (submit)="edit()">
+          <p>
+            Email: 
+            <input type="email" formControlName="email" class="form-control">
+          </p>
+          <p>
+            Nom d'utilisateur: 
+            <input type="text" formControlName="username" class="form-control">
+          </p>
+          <p>
+            Mot de passe: 
+            <input type="password" formControlName="password" class="form-control">
+          </p>
+          <p>
+            Prénom: 
+            <input type="text" formControlName="firstname" class="form-control">
+          </p>
+          <p>
+            Nom: 
+            <input type="text" formControlName="lastname" class="form-control">
+          </p>
+          <p>
+            Ville: 
+            <input type="text" formControlName="city" class="form-control">
+          </p>
+          <p>
+            Rue: 
+            <input type="text" formControlName="street" class="form-control">
+          </p>
+          <p>
+            Numéro: 
+            <input type="number" formControlName="number" class="form-control">
+          </p>
+          <p>
+            Code Postal: 
+            <input type="text" formControlName="zipcode" class="form-control">
+          </p>
+          <p>
+            Latitude: 
+            <input type="text" formControlName="lat" class="form-control">
+          </p>
+          <p>
+            Longitude: 
+            <input type="text" formControlName="long" class="form-control">
+          </p>
+          <p>
+            Téléphone: 
+            <input type="text" formControlName="phone" class="form-control">
+          </p>
+          <p>
+            <button type="submit" class="btn btn-primary">Valider</button>
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+  

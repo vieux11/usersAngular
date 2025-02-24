@@ -1,0 +1,19 @@
+<div class="container my-4" *ngIf="user">
+  <div class="card" style="max-width: 540px;">
+    <div class="card-header">
+      {{ user.username }}
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">{{ user.name.firstname }} {{ user.name.lastname }}</h5>
+      <p class="card-text">
+        <strong>Email:</strong> {{ user.email }} <br>
+        <strong>Téléphone:</strong> {{ user.phone }} <br>
+        <strong>Adresse:</strong> {{ user.address.street }}, n°{{ user.address.number }}, 
+        {{ user.address.city }} - {{ user.address.zipcode }} <br>
+        <strong>Géolocalisation:</strong> Lat: {{ user.address.geolocation.lat }}, 
+        Long: {{ user.address.geolocation.long }}
+      </p>
+    </div>
+  </div>
+</div>
+
